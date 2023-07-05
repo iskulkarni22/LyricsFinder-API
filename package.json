@@ -1,7 +1,7 @@
 {
   "name": "mern-backend",
   "version": "1.0.0",
-  "description": "techNotes MERN project",
+  "description": "MERN project",
   "main": "server.js",
   "scripts": {
     "start": "node server",

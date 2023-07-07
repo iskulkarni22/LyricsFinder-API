@@ -4,7 +4,7 @@ const asyncHandler = require('express-async-handler')
 // @route GET /api_key
 // @access Private
 const getGeniusSong = asyncHandler(async (req, res) => {
-    const search_term = req.headers.search_term
+    const search_term = decodeURIComponent(req.headers.search_term)
     console.log(search_term)
     const api_key = process.env.GENIUS_API_KEY
     fetch(`https://api.genius.com/search?q=${search_term}&access_token=${api_key}`).then(r => r.json()).then(result => {
